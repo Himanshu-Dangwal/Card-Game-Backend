@@ -2,12 +2,7 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 import mongoose from "mongoose";
 
 // Test database
-const URI =
-  "mongodb+srv://vikasbishnoi:sI0lwb6n3S2YtB63@swiggy-assignment.8cznrxq.mongodb.net/?retryWrites=true&w=majority";
-
-// Prod database
-// const URI =
-//   "mongodb+srv://vikasbishnoi:sI0lwb6n3S2YtB63@swiggy-assignment.8cznrxq.mongodb.net/unodb?retryWrites=true&w=majority";
+const URI = process.env.MONGO_URI;
 
 export const initializeDatabase = (callback) => {
   const options = {
