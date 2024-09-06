@@ -8,7 +8,7 @@ import { initializeDatabase } from "./database.js";
 
 const app = express();
 app.use(cors({ origin: "*" }));
-const server = app.listen(5000);
+const server = app.listen(8000);
 const io = new Server(server);
 
 // Initialize database

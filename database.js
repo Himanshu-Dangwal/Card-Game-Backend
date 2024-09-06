@@ -1,8 +1,15 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
-// Test database
+// Load environment variables from the .env file
+dotenv.config();
+
+// Access the MONGO_URI environment variable
 const URI = process.env.MONGO_URI;
+
+// Log the URI to the console to check if it's loaded correctly
+console.log(URI);
 
 export const initializeDatabase = (callback) => {
   const options = {
